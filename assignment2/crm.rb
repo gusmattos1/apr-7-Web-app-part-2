@@ -1,18 +1,26 @@
 require 'sinatra'
 require_relative 'contact'
 
-
 get '/' do
+  redirect to ('/home')
+end
+
+get '/home' do
+  @title = 'Home'
   erb :index
 end
 
 
 get '/contacts' do
+  @title = 'Contacts'
+
   @contacts = Contact.all
   erb :contacts
 end
 
 get '/about' do
+  @title = 'about'
+
   erb :about
 end
 
