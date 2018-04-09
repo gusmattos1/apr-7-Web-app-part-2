@@ -17,9 +17,9 @@ get '/contacts' do
   erb :contacts
 end
 
-get '/contacts/1' do
-  @contact = Contact.find_by({id: params[:id].to_i})
-  erb :show_contact
+get '/test' do
+  # @contact = Contact.find_by({id: params[:id].to_i})
+  erb :showcontact
 end
 
 get '/about' do
